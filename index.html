@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro</title>
+    <!-- fav icon logo -->
+    <link rel="shortcut icon" href="assets/img/Meubel_House_Logo.svg" type="image/x-icon">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- Start header -->
+    <header class="position-fixed top-0 w-100 z-3">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand d-flex gap-2 align-items-center" href="index.html">
+                    <img src="assets/img/Meubel_House_Logo.svg" alt="logoNavbar">
+                    <h3 class="mb-0 fw-bold fs-2">Furniro</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarofHeader"
+                    aria-controls="navbarofHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarofHeader">
+                    <div class="navbar-nav mx-auto column-gap-5">
+                        <a class="nav-link active fw-medium" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link fw-medium fs-6" href="products.html">Shop</a>
+                        <a class="nav-link fw-medium" href="#">About</a>
+                        <a class="nav-link fw-medium" href="contact.html">Contact</a>
+                    </div>
+                    <div class="icons d-flex gap-3">
+                        <button class="border-0 bg-transparent"><i class="fa-regular fa-user"></i></button>
+                        <button class="border-0 bg-transparent"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button class="border-0 bg-transparent"><i class="fa-regular fa-heart"></i></button>
+                        <button class="border-0 bg-transparent" data-bs-toggle="offcanvas" data-bs-target="#cartList"
+                            aria-controls="cartList"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+    <!-- Start Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartList" aria-labelledby="cartListLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="cartListLabel">Products List</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+        </div>
+    </div>
+    <!-- End Cart Offcanvas -->
+    <!-- Start Main -->
+    <main>
+        <div class="container min-vh-100 align-content-center">
+            <div class="content bg-primary-subtle ms-auto p-5">
+                <h6>New Arrival</h6>
+                <h1 class="text-primary fw-bold">Discover Our New Collection</h1>
+                <p class="fw-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                    ullamcorper
+                    mattis.</p>
+                <a href="#Our_Products"
+                    class="text-white text-decoration-none bg-primary py-3 px-5 d-inline-block fw-bold fs-6">BUY
+                    NOW</a>
+            </div>
+        </div>
+    </main>
+    <!-- End Main -->
+
+    <!-- Start Section Range -->
+    <section class="range my-5 ">
+        <div class="container">
+            <div class="text pb-4 text-center">
+                <h3 class="fw-bold">Browse The Range</h3>
+                <p class="fw-normal text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-gap-5 justify-content-center mx-xl-4">
+                <div class="col ">
+                    <div class="img text-center ">
+                        <img src="assets/img/diningRange.svg" class="img-fluid w-100 rounded" alt="Dining pic">
+                        <span class=" d-block pt-3">Dining</span>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="img text-center">
+                        <img src="assets/img/livingRange.svg" class="img-fluid w-100 rounded" alt="Living pic">
+                        <span class=" d-block pt-3">Living</span>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="img text-center">
+                        <img src="assets/img/bedroomRange.svg" class="img-fluid w-100 rounded" alt="Bedroom pic">
+                        <span class=" d-block pt-3">Bedroom</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- End Section Range -->
+
+    <!-- Start Section Products -->
+    <section class="products mb-5" id="Our_Products">
+        <div class="container">
+            <h2 class="text-center pb-4 fw-bold ">Our Products</h2>
+            <div id="allProductsContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gy-3 mb-4">
+
+            </div>
+            <a href="products.html" class="outline-primary py-2 px-5 mx-auto d-block fit-content">Show More</a>
+        </div>
+    </section>
+    <!-- End Section Products -->
+
+    <!-- Start Rooms Inspiration -->
+    <section class="rooms my-4">
+        <div class="container py-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+                <div class="col align-content-center text-center text-md-start">
+                    <div class="content align-content-center">
+                        <h2 class="fw-bold">50+ Beautiful rooms inspiration</h2>
+                        <p class="fw-medium text-secondary-emphasis">Our designer already made a lot of beautiful
+                            prototipe of rooms that inspire you</p>
+                        <a href="#" class="bg-primary text-white px-4 py-2">Explore More</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="middle position-relative ">
+                        <aside>
+                            <img src="assets/img/bedroom1.svg" alt="bedroom 1" class="">
+                            <div class="box z-1 position-absolute p-4">
+                                <div class="title position-relative align-content-center">
+                                    <span id="bedroom_number" class="fw-medium text-secondary-emphasis">01</span>
+                                    <span class="fw-medium text-secondary-emphasis ms-4">Bed Room</span>
+                                </div>
+                                <h4 class="mb-0">Inner Peace</h4>
+                            </div>
+                            <button class="btn position-absolute z-1 bg-primary text-white rounded-0"><i
+                                    class="fa-solid fa-arrow-right"></i></button>
+                        </aside>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="slider-container overflow-hidden position-relative w-100">
+                        <div class="slider-track d-flex gap-4">
+                            <div class="slider active">
+                                <img src="assets/img/bedroom1.svg" alt="bedroom 1">
+                            </div>
+                            <div class="slider">
+                                <img src="assets/img/bedroom3.svg" alt="bedroom 2">
+                            </div>
+                            <div class="slider">
+                                <img src="assets/img/bedroom2.svg" alt="bedroom 3">
+                            </div>
+                            <div class="slider">
+                                <img src="assets/img/product4.svg" alt="bedroom 4">
+                            </div>
+                        </div>
+                        <button id="nextSlider"
+                            class="next text-primary rounded-circle text-center align-content-center bg-white border-0 p-2 shadow-lg"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <div
+                            class="pagination d-flex justify-content-center justify-content-lg-start gap-2 mt-3 mt-lg-5">
+                            <button class="active"> <span></span></button>
+                            <button><span></span></button>
+                            <button><span></span></button>
+                            <button><span></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Rooms Inspiration -->
+
+    <!--Start #FuniroFurniture  -->
+    <section class="furniture mt-5 mb-4">
+        <div class="title text-center">
+            <h5 class="text-secondary-emphasis">Share your setup with</h5>
+            <h2 class="fw-bold">#FuniroFurniture</h2>
+            <div class="pictures d-grid">
+                <div class="item-1"><img src="assets/img/Furniture1.svg" alt="Furniture1"></div>
+                <div class="item-2"><img src="assets/img/Furniture2.svg" alt="Furniture2"></div>
+                <div class="item-3"> <img src="assets/img/Furniture3.svg" alt="Furniture3"></div>
+                <div class="item-4"> <img src="assets/img/Furniture4.svg" alt="Furniture4"></div>
+                <div class="item-5"> <img src="assets/img/Furniture5.svg" alt="Furniture5"></div>
+                <div class="item-6"> <img src="assets/img/Furniture6.svg" alt="Furniture6"></div>
+                <div class="item-7"> <img src="assets/img/Furniture7.png" alt="Furniture7"></div>
+                <div class="item-8"> <img src="assets/img/Furniture8.svg" alt="Furniture8"></div>
+                <div class="item-9"> <img src="assets/img/Furniture9.svg" alt="Furniture9"></div>
+            </div>
+        </div>
+    </section>
+    <!--End #FuniroFurniture  -->
+
+    <!-- Start footer -->
+
+    <footer class="mt-5 pt-5">
+        <div class="container ">
+            <div class="row gx-1 gx-sm-3 text-center text-md-start row-gap-5 row-gap-lg-0 gx-xl-5 pb-5">
+                <div class="col col-12 col-md-6 col-lg-3">
+                    <div class="title">
+                        <h3 class="fw-bold mb-3 mb-md-5">Funiro.</h3>
+                        <p class="fw-normal">400 University Drive Suite 200 Coral Gables,<span class="d-block">FL 33134
+                                USA</span></p>
+                    </div>
+                </div>
+                <div class="col col-6  col-lg-2">
+                    <div class="linksdiv">
+                        <h6 class="mb-5 fw-medium">Links</h6>
+                        <div class="links d-flex flex-column row-gap-5">
+                            <a href="index.html">Home</a>
+                            <a href="products.html">Shop</a>
+                            <a href="#">About</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col col-6 col-lg-3">
+                    <div class="help">
+                        <h6 class="mb-5 fw-medium">Help</h6>
+                        <div class="links_help d-flex flex-column row-gap-5">
+                            <a href="#">Payment Options</a>
+                            <a href="#">Returns</a>
+                            <a href="#">Privacy Policies</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6 col-lg-4">
+                    <div class="newsletter">
+                        <h6 class="mb-4 mb-md-5 fw-medium">Newsletter</h6>
+                        <form action="" class="d-flex column-gap-2">
+                            <input type="email" name="emailsubscribe" id="emailsubscribe" class="fw-normal"
+                                placeholder="Enter Your Email Address">
+                            <button class="bg-transparent fw-medium">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="right-reserved py-4 fw-normal">2023 furino. All rights reverved</div>
+        </div>
+    </footer>
+
+    <!-- End footer -->
+
+    <!-- bootstrap -->
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Java Script -->
+    <script type="module" src="assets/js/app.js"></script>
+
+    <!-- JavaScript addCart -->
+    <script type="module" src="assets/js/callfunction.js"></script>
+</body>
+
+</html>

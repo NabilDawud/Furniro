@@ -1,0 +1,660 @@
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+.bg-primary-subtle {
+    background-color: #FFF3E3 !important;
+}
+
+.text-primary {
+    color: #B88E2F !important;
+}
+
+.bg-primary {
+    background-color: #B88E2F !important;
+}
+
+.outline-primary {
+    border: #B88E2F 1px solid;
+    color: #B88E2F !important;
+}
+
+.text-muted {
+    color: #898989 !important;
+}
+
+.text-secondary {
+    color: #666666 !important;
+}
+
+.text-secondary-emphasis {
+    color: #616161 !important;
+}
+
+.fit-content {
+    width: fit-content !important;
+}
+
+/* Start Header */
+header {
+    z-index: 1000 !important;
+
+    nav {
+        h3 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+        }
+    }
+}
+
+/* End Header */
+
+/* Start Main */
+main {
+    background: url(../img/mainImage.svg) no-repeat center / cover;
+
+    .content {
+        max-width: 578px;
+    }
+
+    a {
+        transition: 1s;
+        border: transparent 1px solid;
+
+        &:hover {
+            border-color: #B88E2F;
+            background-color: #FFF3E3 !important;
+            color: #B88E2F !important;
+        }
+    }
+}
+
+/* End Main */
+
+/* Start Section Products */
+section.products {
+    .col {
+
+        .card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            .front {
+                img {
+                    height: 200px;
+                    width: 100%;
+                    object-fit: contain;
+
+                }
+
+                .content {
+                    h4 {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    p {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+
+                    }
+                }
+            }
+
+            .back {
+                position: absolute;
+                inset: 0;
+                background-color: hsla(0, 0%, 23%, 0.7);
+                translate: -100%;
+                transition: 1s;
+            }
+        }
+
+        .card:hover .back {
+            translate: 0;
+        }
+    }
+}
+
+/* End Section Products */
+
+/* Start Rooms Inspiration */
+
+section.rooms {
+
+    background-color: #FCF8F3;
+
+    .row {
+        min-height: 70vh;
+
+        .content a.bg-primary {
+            transition: 1s;
+            border: transparent 1px solid;
+
+            &:hover {
+
+                border-color: #B88E2F;
+                background-color: #FCF8F3 !important;
+                color: #B88E2F !important;
+
+            }
+        }
+
+        @media (width <=576px) {
+            .middle aside img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .middle {
+            aside {
+                img {
+                    max-height: 500px;
+                }
+
+                .box {
+                    opacity: .72;
+                    bottom: 20px;
+                    left: 20px;
+                    background-color: white;
+                    width: 192px;
+
+                    span#bedroom_number::after {
+                        content: '';
+                        position: absolute;
+                        width: 22px;
+                        height: 1.5px;
+                        background-color: #616161;
+                        top: 50%;
+                        translate: 0 -50%;
+                        left: 21px;
+
+                    }
+                }
+
+                button {
+                    bottom: 20px;
+                    left: calc(192px + 21px);
+                }
+            }
+        }
+
+        .slider-container {
+            .slider-track {
+                transition: 1s;
+
+                .slider {
+                    min-width: 85%;
+                    max-height: 372px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                @media (992px < width < 1200px) {
+                    .slider.active img {
+                        max-height: 328px;
+                    }
+                }
+            }
+
+            button.next {
+                position: absolute;
+                top: 50%;
+                right: 15%;
+                translate: 50% -50%;
+                z-index: 2;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+
+            .pagination {
+                button {
+                    border-radius: 50%;
+                    padding: 8px;
+                    border: 0;
+                    background-color: transparent;
+
+                    span {
+                        display: block;
+                        width: 10px;
+                        aspect-ratio: 1 / 1;
+                        border-radius: 50%;
+                        background-color: #D8D8D8;
+                    }
+                }
+
+                button.active {
+                    background-color: white;
+                    border: #B88E2F solid 1px;
+                }
+
+                button.active span {
+                    background-color: #B88E2F;
+                }
+            }
+        }
+    }
+}
+
+/* End Rooms Inspiration */
+
+/* Start #FuniroFurniture */
+section.furniture {
+
+    @media (width >=768px) {
+        .pictures {
+            height: 80vh;
+            grid-template-columns: repeat(14, 1fr);
+            grid-template-rows: repeat(15, 1fr);
+        }
+    }
+
+    .pictures {
+
+        gap: 10px;
+
+        img {
+            width: 100% !important;
+            height: 100%;
+            object-fit: cover;
+            object-position: left;
+        }
+
+
+
+        .item-1 {
+            grid-row: 1 / 9;
+            grid-column: 1 / 2;
+        }
+
+        .item-2 {
+            grid-area: 2 / 2 /9 /6;
+        }
+
+        .item-3 {
+            grid-area: 4 / 6 /12 /9;
+        }
+
+        .item-4 {
+            grid-area: 3 / 9 /10 /12;
+        }
+
+        .item-5 {
+            grid-area: 1 / 12 /10 /15;
+        }
+
+        .item-6 {
+            grid-area: 9 / 1 /16 /3;
+        }
+
+        .item-7 {
+            grid-area: 9 / 3 /14 /6;
+        }
+
+        .item-8 {
+            grid-area: 10 / 9 /15 /11;
+        }
+
+        .item-9 {
+            grid-area: 10 / 11 /14 /14;
+        }
+
+
+    }
+
+    @media (width < 768px) {
+        .pictures>* {
+            grid-row: initial;
+            grid-column: initial !important;
+            grid-area: initial !important;
+
+        }
+
+        .pictures .item-9 {
+            min-height: 330px;
+        }
+
+        .pictures {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+
+        }
+
+    }
+}
+
+/* End #FuniroFurniture */
+
+/* Start Footer */
+footer {
+    border-top: #D9D9D9 1px solid;
+
+    .container {
+        .row {
+            border-bottom: #D9D9D9 1px solid;
+
+            h6 {
+                color: #9F9F9F;
+            }
+
+            a {
+                font-weight: 500;
+            }
+
+            .title {
+                p {
+                    color: #9F9F9F;
+                }
+            }
+
+            @media (width >=992px) {
+
+                .linksdiv,
+                .help {
+                    justify-self: center;
+                }
+            }
+
+            .newsletter {
+                form>* {
+                    border: 0;
+                    border-bottom: black 1px solid;
+                    padding-inline: 0;
+                    outline: 0;
+                    font-size: 14px;
+                }
+
+                form input[type="email"] {
+                    width: 100%;
+                }
+
+                form input::placeholder {
+                    color: #9F9F9F;
+                    font-weight: 400;
+                    padding: 0;
+                }
+
+
+            }
+        }
+    }
+}
+
+/* End Footer */
+
+
+/*------------- Start Shop Page -------------*/
+
+
+/* Start Main Shop */
+section.shop {
+    margin-top: 61px;
+    background: url('../img/mainShop.svg');
+
+    .container {
+        height: 300px;
+
+        .title {
+            .text {
+                i {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+}
+
+/* End Main Shop */
+
+/* Start Filter Nav */
+nav.filter {
+    background-color: #F9F1E7;
+
+    .container {
+        .startFiltering {
+            button {
+                border: solid transparent 1px;
+            }
+
+            button:hover {
+                border-color: black;
+            }
+
+            .multiIconsFiltering {
+                >span {
+                    width: 2px;
+                    height: 37px;
+                    background-color: #9F9F9F;
+                }
+            }
+
+            @media (width < 332px) {
+                .multiIconsFiltering {
+                    >span {
+                        /* display: none !important; */
+                        width: 37px;
+                        height: 2px;
+
+                    }
+                }
+            }
+
+        }
+
+        .endFiltering {
+            .productsSortBy {
+                input {
+                    width: 100%;
+                    max-width: 188px;
+                    height: 55px;
+                    aspect-ratio: 0;
+                    text-align: start;
+                }
+            }
+
+            input {
+                width: 55px;
+                aspect-ratio: 1 / 1;
+                border: 0;
+                outline: 0;
+                color: #9F9F9F;
+                display: flex;
+                text-align: center;
+            }
+
+
+        }
+    }
+}
+
+/* End Filter Nav */
+
+/* Start Pagination */
+
+nav {
+    ul.pagination {
+        li.page-item a.page-link {
+            background-color: #F9F1E7;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            color: black;
+            outline: 0;
+            border: 0;
+        }
+
+        li.page-item:not(:last-of-type) a.page-link {
+            width: 50px;
+            aspect-ratio: 1 / 1;
+        }
+
+        li.page-item:last-of-type a.page-link {
+            width: 90px;
+            height: 50px;
+            font-weight: 300;
+        }
+
+        li.page-item.active:not(:last-of-type) a.page-link {
+            background-color: #B88E2F;
+            color: white;
+
+        }
+
+
+        a.page-link {
+            border-radius: 6px !important;
+        }
+    }
+}
+
+/* End Pagination */
+
+
+/* Statrt Achievement */
+section.achievement {
+    background-color: #FAF3EA;
+
+    .row {
+        .col-xl {
+            padding-inline: 0 !important;
+
+            .box {
+                .text {
+                    h5 {}
+
+                    p {
+                        color: #898989;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* End Achievement */
+
+
+
+/* ---------------- Contact page ---------------- */
+
+/* Start Contact Text  Section */
+
+section.contact_text {
+    .container {
+        p {
+            color: #9F9F9F;
+            max-width: 644px;
+            width: 100%;
+        }
+    }
+}
+
+/* End Contact Text  Section */
+
+
+/*  Start Contact Section  */
+
+section.contact {
+    max-width: 1058px;
+    width: 100%;
+
+    .container {
+        aside.contact_detailes {
+            .box {
+                .text {
+                    @media (width < 576px) {
+
+                        address,
+                        span {
+                            max-width: max-content !important;
+                        }
+                    }
+
+                    address,
+                    span {
+                        max-width: 212px;
+                        width: 100%;
+                    }
+
+                    h5 {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        form {
+            max-width: 528px;
+            width: 100%;
+
+            input,
+            textarea {
+                width: 100%;
+                border-radius: 10px;
+                border: solid 1px #9F9F9F;
+                padding-block: 18px;
+                padding-inline-start: 23px;
+                outline: 0;
+                font-weight: 400;
+                margin-bottom: 35px;
+            }
+
+            textarea {
+                height: 120px;
+                resize: none;
+            }
+
+            input::placeholder,
+            textarea::placeholder {
+                font-weight: 400;
+                color: #9F9F9F;
+            }
+
+            button {
+                max-width: 237px;
+                width: 100%;
+                height: 55px;
+                border: transparent 1px solid;
+                transition: .7s;
+            }
+
+            button:hover {
+                background-color: white !important;
+                color: #B88E2F !important;
+                border-color: #B88E2F;
+            }
+        }
+    }
+
+}
+
+/*  End Contact Section  */
